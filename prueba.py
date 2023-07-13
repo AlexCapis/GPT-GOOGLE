@@ -1,6 +1,5 @@
-from flask import Flask, jsonify
-from langchain.agents import load_tools
-from langchain.agents import initialize_agent
+from flask import Flask, jsonify, render_template
+from langchain.agents import load_tools, initialize_agent
 from langchain.llms import OpenAI
 import os
 
@@ -11,9 +10,9 @@ app = Flask(__name__)
 app.config['DEBUG'] = True
 
 
-@app.route("/", methods=['GET'])
+@app.route("/")
 def hello():
-    return "Bienvenido a la API del proyecto GPTGoogler"
+    return render_template('preguntas.html')
 
 
 @app.route('/api/generar-respuesta', methods=['POST'])
