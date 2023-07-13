@@ -2,7 +2,10 @@ from flask import Flask, jsonify, render_template
 from langchain.agents import load_tools, initialize_agent
 from langchain.llms import OpenAI
 import os
+<<<<<<<< HEAD:src/prueba.py
 from flask import Flask, jsonify, request
+========
+>>>>>>>> alex2:prueba3.py
 
 os.environ["OPENAI_API_KEY"] = "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"
 os.environ["SERPAPI_API_KEY"] = "6cdddecde869790ad6c4ed5c449addd08f39948071e3802d9bbe07e86bbcf276"
@@ -19,7 +22,11 @@ def hello():
 @app.route('/api/generar-respuesta', methods=['POST'])
 def generar_respuesta():
     pregunta = input("Introduce tu consulta")
+<<<<<<<< HEAD:src/prueba.py
 
+========
+    print(pregunta)
+>>>>>>>> alex2:prueba3.py
     try:
         # Load the model
         llm = OpenAI()
@@ -33,7 +40,25 @@ def generar_respuesta():
         # Use the agent to generate a response
         respuesta = agent.run(pregunta)
 
+<<<<<<<< HEAD:src/prueba.py
         # Devuelve la respuesta generada en formato JSON
+========
+
+        # Acceso a la base de datos 
+        cursor = db.cursor()
+        cursor.connection.commit()
+        db = ''' '''
+        cursor.execute()
+
+
+        # Insertamos en la tabla elegida los datos obtenidos
+        insert_data = '''INSERT INTO GPT (FECHA, PREGUNTAS, RESPUESTAS) VALUES ('%s', '%s', '%s')''' % pregunta_respuesta
+        crsr.execute(insert_data)
+
+        # Devuelve la respuesta generada en formato JSON
+        db.commit()
+        db.close()
+>>>>>>>> alex2:prueba3.py
         return jsonify({'respuesta': respuesta})
     except Exception as e:
         return jsonify({'error': str(e)}), 50
