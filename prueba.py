@@ -18,7 +18,7 @@ def hello():
 @app.route('/api/generar-respuesta', methods=['POST'])
 def generar_respuesta():
     pregunta = input("Introduce tu consulta")
-
+    print(pregunta)
     try:
         # Load the model
         llm = OpenAI()
@@ -32,7 +32,21 @@ def generar_respuesta():
         # Use the agent to generate a response
         respuesta = agent.run(pregunta)
 
+
+        # Acceso a la base de datos 
+        cursor = db.cursor()
+        cursor.connection.commit()
+        db = ''' '''
+        cursor.execute()
+
+
+        # Insertamos en la tabla elegida los datos obtenidos
+        insert_data = '''INSERT INTO GPT (FECHA, PREGUNTAS, RESPUESTAS) VALUES ('%s', '%s', '%s')''' % pregunta_respuesta
+        crsr.execute(insert_data)
+
         # Devuelve la respuesta generada en formato JSON
+        db.commit()
+        db.close()
         return jsonify({'respuesta': respuesta})
     except Exception as e:
         return jsonify({'error': str(e)}), 50
