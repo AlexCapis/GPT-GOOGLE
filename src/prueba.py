@@ -2,6 +2,7 @@ from flask import Flask, jsonify, render_template
 from langchain.agents import load_tools, initialize_agent
 from langchain.llms import OpenAI
 import os
+from flask import Flask, jsonify, request
 
 os.environ["OPENAI_API_KEY"] = "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"
 os.environ["SERPAPI_API_KEY"] = "6cdddecde869790ad6c4ed5c449addd08f39948071e3802d9bbe07e86bbcf276"
