@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Preguntas y Respuestas</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #F8F8F8;
+    }
+
+    .container {
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 40px;
+      background-color: #FFFFFF;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+
+    h1 {
+      color: #333333;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 10px;
+      font-weight: bold;
+      color: #555555;
+    }
+
+    input[type="text"] {
+      width: 100%;
+      padding: 10px;
+      font-size: 16px;
+      border-radius: 4px;
+      border: 1px solid #CCCCCC;
+    }
+
+    button[type="submit"],
+    button#btn-volver {
+      padding: 10px 20px;
+      font-size: 16px;
+      font-weight: bold;
+      color: #FFFFFF;
+      background-color: #4CAF50;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    #respuesta-container {
+      margin-top: 20px;
+      display: none;
+    }
+
+    h2 {
+      margin-bottom: 10px;
+      color: #333333;
+    }
+
+    #respuesta {
+      font-size: 16px;
+      color: #555555;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>¡Bienvenido a nuestra aplicación de Preguntas y Respuestas!</h1>
+    <form id="formulario-pregunta" method="POST">
+      <label for="pregunta">Ingresa tu pregunta:</label>
+      <input type="text" id="pregunta" name="pregunta" required>
+      <button type="submit">Enviar</button>
+    </form>
+    <div id="respuesta-container">
+      <h2>Respuesta:</h2>
+      <p id="respuesta">{{ respuesta }}</p>
+      <button id="btn-volver">Volver</button>
+    </div>
+  </div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script>
+    $(document).ready(function() {
+      $('#formulario-pregunta').submit(function(event) {
+        event.preventDefault();
+
+        var pregunta = $('#pregunta').val();
+
+        $.ajax({
+          url: '/',
+          method: 'POST',
+          data: { pregunta: pregunta },
+          success: function(response) {
+            $('#respuesta').text(response.respuesta);
+            $('#respuesta-container').show();
+          },
+          error: function(error) {
+            console.error(error);
+          }
+        });
+      });
+
+      $('#btn-volver').click(function() {
+        $('#respuesta-container').hide();
+      });
+    });
+  </script>
+</body>
+</html>
