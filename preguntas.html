@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Preguntas y Respuestas</title>
+  <!-- Agrega los enlaces a los estilos CSS que desees utilizar -->
+  <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+  <div class="container">
+    <h1>¡Bienvenido a nuestra aplicación de Preguntas y Respuestas!</h1>
+    <form id="formulario-pregunta">
+      <label for="pregunta">Ingresa tu pregunta:</label>
+      <input type="text" id="pregunta" name="pregunta" required>
+      <button type="submit">Enviar</button>
+    </form>
+    <div id="respuesta-container" style="display: none;">
+      <h2>Respuesta:</h2>
+      <p id="respuesta"></p>
+      <button id="btn-volver">Volver</button>
+    </div>
+  </div>
+
+  <!-- Agrega los enlaces a los scripts de JavaScript que desees utilizar -->
+  <script src="jquery.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
