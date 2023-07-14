@@ -36,27 +36,27 @@ def generar_respuesta():
     pregunta = input("Introduce tu consulta: ")
 
     try:
-        # Load the model
+        # Cargamos el modelos
         llm = OpenAI()
 
-        # Load in some tools to use
+        # Cargamos las herramientas que vamos a utilizar
         tools = load_tools(["serpapi", "llm-math"], llm=llm)
 
-        # Initialize the agent with the tools, language model, and agent type
+        # Inicializamos el agente con las herramientas, el modelo de lenguaje y el tipo de agente
         agent = initialize_agent(tools, llm, agent="zero-shot-react-description", verbose=False)
 
-        # Use the agent to generate a response
+        # Utilizamos el agente para generar una respuesta
         respuesta = agent.run(pregunta)
 
-        # Obtener la fecha actual
+        # Obtenemos la fecha actual
         fecha_actual = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-        # Guardar la pregunta y la respuesta en la base de datos
+        # Guardamos la fecha en la que hacemos la consulta, la pregunta y la respuesta en la base de datos
         connection = create_db_connection()
         cursor = connection.cursor()
         cursor.execute("INSERT INTO GPT (FECHA, PREGUNTAS, RESPUESTAS) VALUES (%s, %s, %s)", (fecha_actual, pregunta, respuesta))
         connection.commit()
 
-        # Cerrar la conexión a la base de datos
+        # Cerramos la conexión a la base de datos
         close_db_connection(connection)
 
         # Devuelve la respuesta generada en formato JSON
