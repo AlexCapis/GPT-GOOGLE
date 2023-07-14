@@ -31,4 +31,10 @@ El éxito de este proyecto es gracias al esfuerzo y dedicación de todo el equip
 -   Santiago Valencia[:nose:](https://github.com/Kuja182) 
 -   Alex Marzá[:golf:](https://github.com/AlexCapis)
 -   Erika Guzmán[:crystal_ball:](https://github.com/Erikahenriquez78) 
--   Javier Fernández[:beer:](https://github.com/jaferdy) 
+-   Javier Fernández[:beer:](https://github.com/jaferdy)
+
+-   [Santiago Valencia](https://github.com/Kuja182) [:nose:]
+-   [Alex Marzá](https://github.com/AlexCapis) [:golf:]
+-   [Erika Guzmán](https://github.com/Erikahenriquez78) [:crystal_ball:]
+-   [Javier Fernández](https://github.com/jaferdy) [:beer:]
+
