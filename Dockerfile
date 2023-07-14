@@ -1,5 +1,5 @@
 # Para que nuestra imagen se base en python 
-FROM python:3.11.4-alpine
+FROM python:3.11.4
 
 # Creación de una carpeta donde meter el código fuente de nuestra aplicación. Esta carpeta no hace referencia a la maquina física, sino es en base al contenedor.
 WORKDIR /app
