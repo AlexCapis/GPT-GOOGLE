@@ -1,6 +1,5 @@
 from flask import Flask, jsonify, render_template, request
-from langchain.agents import load_tools
-from langchain.agents import initialize_agent
+from langchain.agents import load_tools, initialize_agent
 from langchain.llms import OpenAI
 import pymysql
 import os
@@ -88,4 +87,4 @@ def show_database():
 
 
 if __name__ == '__main__':
-    app.run()
+    app.run(host="0.0.0.0", port=5000, debug=True)
