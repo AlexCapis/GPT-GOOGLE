@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Generar Respuesta</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f5f5f5;
+    }
+    .container {
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 40px;
+      background-color: #fff;
+      border-radius: 5px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+    h1 {
+      color: #333;
+      text-align: center;
+    }
+    p.respuesta {
+      font-size: 16px;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Generar Respuesta</h1>
+    <form action="/api/generar-respuesta" method="post">
+      <label for="pregunta">Introduce tu consulta:</label><br>
+      <input type="text" id="pregunta" name="pregunta"><br><br>
+      <input type="submit" value="Generar Respuesta">
+    </form>
+    {% if respuesta %}
+      <p class="respuesta">Respuesta generada: {{ respuesta }}</p>
+    {% endif %}
+  </div>
+</body>
+</html>
