@@ -15,10 +15,10 @@ os.environ["SERPAPI_API_KEY"] = "6cdddecde869790ad6c4ed5c449addd08f39948071e3802
 # Crear una conexión a la base de datos
 def create_db_connection():
     return pymysql.connect(
-        host='http://127.0.0.1:5000/',
-        user='your-username',
-        password='your-password',
-        database='your-database'
+        host='database-1.c3d40xwrejy4.eu-west-3.rds.amazonaws.com',
+        user='admin',
+        password='12345678'
+        # port='3306'
     )
 
 # Cerrar la conexión a la base de datos
@@ -61,5 +61,7 @@ def generar_respuesta():
     except Exception as e:
         return jsonify({'error': str(e)}), 500
 
-if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=5000)
+# if __name__ == '__main__':
+#     app.run(host='database-1.c3d40xwrejy4.eu-west-3.rds.amazonaws.com', port=3306)
+
+app.run()

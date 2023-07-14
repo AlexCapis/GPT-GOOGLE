@@ -58,10 +58,10 @@ app.config['DEBUG'] = True
 # Crear una conexión a la base de datos
 def create_db_connection():
     return pymysql.connect(
-        host='your-rds-endpoint',
-        user='your-username',
-        password='your-password',
-        database='your-database'
+        host='database-1.c3d40xwrejy4.eu-west-3.rds.amazonaws.com',
+        user='admin',
+        password='12345678',
+        database='GPT'
     )
 
 # Cerrar la conexión a la base de datos
@@ -94,7 +94,7 @@ def generar_respuesta():
         # Guardar la pregunta y la respuesta en la base de datos
         connection = create_db_connection()
         cursor = connection.cursor()
-        cursor.execute("INSERT INTO preguntas_respuestas (pregunta, respuesta) VALUES (%s, %s)", (pregunta, respuesta))
+        cursor.execute("INSERT INTO GPT (PREGUNTAS, RESPUESTAS) VALUES (%s, %s)", (pregunta, respuesta))
         connection.commit()
 
         # Cerrar la conexión a la base de datos
