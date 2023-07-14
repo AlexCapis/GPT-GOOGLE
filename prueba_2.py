@@ -5,9 +5,10 @@ from langchain.llms import OpenAI
 import pymysql
 import os
 import datetime
+from keys import *
 
-os.environ["OPENAI_API_KEY"] = "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"
-os.environ["SERPAPI_API_KEY"] = "6cdddecde869790ad6c4ed5c449addd08f39948071e3802d9bbe07e86bbcf276"
+os.environ["OPENAI_API_KEY"] = gpt
+os.environ["SERPAPI_API_KEY"] = serpapi
 
 app = Flask(__name__)
 app.config['DEBUG'] = True
