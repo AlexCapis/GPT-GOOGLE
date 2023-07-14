@@ -24,4 +24,11 @@ Este proyecto está bajo la Licencia MIT (MIT License).
 - Este proyecto utiliza la biblioteca langchain para interactuar con GPT.
 - El modelo GPT es proporcionado por OpenAI.
 
-## usuarios de github
+<h3 id="Contribuidores"> :family: Contribuidores</h3>
+
+El éxito de este proyecto es gracias al esfuerzo y dedicación de todo el equipo. Cada contribución ha sido valiosa y nos ha llevado más cerca de nuestros objetivos. ¡Agradecemos a todos los integrantes por su trabajo y compromiso! :rocket:
+
+-   Santiago Valencia[:nose:](https://github.com/Kuja182) 
+-   Alex Marzá[:golf:](https://github.com/AlexCapis)
+-   Erika Guzmán[:crystal_ball:](https://github.com/Erikahenriquez78) 
+-   Javier Fernández[:beer:](https://github.com/jaferdy) 
