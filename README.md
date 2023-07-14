@@ -28,13 +28,9 @@ Este proyecto está bajo la Licencia MIT (MIT License).
 
 El éxito de este proyecto es gracias al esfuerzo y dedicación de todo el equipo. Cada contribución ha sido valiosa y nos ha llevado más cerca de nuestros objetivos. ¡Agradecemos a todos los integrantes por su trabajo y compromiso! :rocket:
 
--   Santiago Valencia[:nose:](https://github.com/Kuja182) 
--   Alex Marzá[:golf:](https://github.com/AlexCapis)
--   Erika Guzmán[:crystal_ball:](https://github.com/Erikahenriquez78) 
--   Javier Fernández[:beer:](https://github.com/jaferdy)
 
--   [Santiago Valencia](https://github.com/Kuja182) [:nose:]
--   [Alex Marzá](https://github.com/AlexCapis) [:golf:]
--   [Erika Guzmán](https://github.com/Erikahenriquez78) [:crystal_ball:]
--   [Javier Fernández](https://github.com/jaferdy) [:beer:]
+-   [Santiago Valencia](https://github.com/Kuja182) :nose:
+-   [Alex Marzá](https://github.com/AlexCapis) :golf:
+-   [Erika Guzmán](https://github.com/Erikahenriquez78) :crystal_ball:
+-   [Javier Fernández](https://github.com/jaferdy) :beer:
 
