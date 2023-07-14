@@ -1,5 +1,3 @@
 # Archivos que se mantendrán ignorados:
-# instructions_project.ipynb
-api_key_chatgpt.txt
-api_key_serpapi.txt
+/src/notebooks/instrucciones_proyecto.ipynb
 keys.py
