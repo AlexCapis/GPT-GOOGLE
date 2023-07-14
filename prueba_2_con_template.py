@@ -69,6 +69,23 @@ def generar_respuesta():
     else:
         return render_template('formulario.html')
 
+@app.route('/database', methods=['GET'])
+def show_database():
+    try:
+        # Obtener los registros de la base de datos
+        connection = create_db_connection()
+        cursor = connection.cursor()
+        cursor.execute("SELECT * FROM GPT")
+        rows = cursor.fetchall()
+
+        # Cerrar la conexión a la base de datos
+        close_db_connection(connection)
+
+        # Renderizar el archivo HTML 'database.html' pasando los registros como contexto
+        return render_template('database.html', rows=rows)
+    except Exception as e:
+        return jsonify({'error': str(e)}), 500
+
 
 if __name__ == '__main__':
     app.run()
