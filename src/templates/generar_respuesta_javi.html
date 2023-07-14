@@ -9,54 +9,48 @@
       background-color: #f5f5f5;
     }
     .container {
-      max-width: 400px;
+      max-width: 600px;
       margin: 0 auto;
       padding: 40px;
       background-color: #fff;
       border-radius: 5px;
       box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-      text-align: center;
     }
     h1 {
       color: #333;
-      margin-bottom: 20px;
-    }
-    form {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-    label {
-      font-size: 16px;
-      margin-bottom: 10px;
-    }
-    input[type="text"] {
-      width: 100%;
-      padding: 10px;
-      font-size: 16px;
-      border: 1px solid #ccc;
-      border-radius: 4px;
-      box-sizing: border-box;
-      margin-bottom: 20px;
-    }
-    input[type="submit"] {
-      background-color: #4CAF50;
-      color: white;
-      padding: 10px 20px;
-      font-size: 16px;
-      border: none;
-      border-radius: 4px;
-      cursor: pointer;
-    }
-    input[type="submit"]:hover {
-      background-color: #45a049;
+      text-align: center;
     }
     p.respuesta {
       font-size: 16px;
       margin-top: 20px;
-      background-color: #f0f0f0;
-      padding: 10px;
+    }
+    .form-container {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .form-container label {
+      display: block;
+      margin-bottom: 10px;
+      text-align: center;
+    }
+    .btn-container {
+      text-align: center;
+      margin-top: 30px;
+    }
+    .btn {
+      display: inline-block;
+      background-color: #4CAF50;
+      color: white;
+      padding: 12px 24px;
+      font-size: 18px;
+      border: none;
       border-radius: 4px;
+      cursor: pointer;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+    }
+    .btn:hover {
+      background-color: #45a049;
     }
   </style>
 </head>
@@ -64,13 +58,20 @@
   <div class="container">
     <h1>Generar Respuesta</h1>
     <form action="/api/generar-respuesta" method="post">
-      <label for="pregunta">Introduce tu consulta:</label>
-      <input type="text" id="pregunta" name="pregunta">
-      <input type="submit" value="Generar Respuesta">
+      <div class="form-container">
+        <label for="pregunta">Introduce tu consulta:</label>
+        <input type="text" id="pregunta" name="pregunta">
+      </div>
+      <div class="btn-container">
+        <input type="submit" value="Generar Respuesta" class="btn">
+      </div>
     </form>
     {% if respuesta is defined %}
       <p class="respuesta">Respuesta generada: {{ respuesta }}</p>
     {% endif %}
+    <div class="btn-container">
+      <a class="btn" href="/database">Ver Base de Datos</a>
+    </div>
   </div>
 </body>
 </html>
