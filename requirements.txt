@@ -1,3 +1,5 @@
 flask
 langchain
 pymysql
+openai
+google-search-results
