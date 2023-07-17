@@ -25,6 +25,15 @@ El repositorio sigue la siguiente estructura de carpetas:
 
 ¡Se aceptan contribuciones! Siéntete libre de enviar una solicitud de extracción (pull request) o abrir un problema (issue) para cualquier solicitud de nueva funcionalidad, corrección de errores o mejoras que desees realizar.
 
+## Documento de Instalación
+
+Si deseas obtener una guía más detallada sobre la instalación y configuración de GPT-GOOGLE, consulta el documento de instalación en el siguiente enlace:
+
+[Documento de Instalación GPT-GOOGLE](https://github.com/AlexCapis/GPT-GOOGLE/blob/main/src/notebooks/Instrucciones_instalaci%C3%B3n.ipynb)
+
+En este documento encontrarás paso a paso las instrucciones necesarias para instalar la aplicación en tu entorno local y comenzar a disfrutar de la generación de respuestas relevantes con el poderoso modelo GPT.
+
+Si encuentras algún problema durante la instalación o tienes preguntas adicionales, no dudes en ponerte en contacto con el equipo de desarrollo mencionado en la sección de contribuciones o agradecimientos. ¡Están dispuestos a ayudarte!
 
 ## <span style="color:purple">Licencia</span>
 
