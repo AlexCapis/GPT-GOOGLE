@@ -9,7 +9,6 @@ GPT-GOOGLE es una aplicación web desarrollada en Python que utiliza el modelo G
 El repositorio sigue la siguiente estructura de carpetas:
 
 - `src/`: Contiene el archivo principal del proyecto, `version_1.0.py`, que es el punto de entrada para ejecutar la aplicación. Además, dentro de la carpeta `src`, encontrarás las siguientes subcarpetas:
-  - `docs/`: Aquí encontrarás documentación relevante, como tutoriales, guías de uso o cualquier otro material informativo relacionado con el proyecto.
   - `notebooks/`: Esta carpeta alberga cuadernos de Jupyter relacionados con el proyecto. Puedes explorar y ejecutar estos cuadernos para experimentar con el código y los datos.
   - `templates/`: En esta carpeta se encuentran las plantillas de código y archivos HTML utilizados para la interfaz de usuario de la aplicación.
 
