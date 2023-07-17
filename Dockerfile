@@ -13,4 +13,4 @@ RUN pip install -r requirements.txt
 EXPOSE 5000
 
 # Para que corra la aplicación.
-CMD ["python", "version_1.0.py"]
+CMD ["python", "/app/version_1.0.py"]
